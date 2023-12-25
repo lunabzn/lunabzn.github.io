@@ -8453,7 +8453,7 @@ h1, h2, h3, h4, h5,
         z-index: 0; }
         @media (max-width: 991.98px) {
           .owl-carousel.home-slider .slider-item .slider-text {
-            text-align: center; } }
+            text-align: right; } }
         .owl-carousel.home-slider .slider-item .slider-text .one-third {
           width: 70%;
           position: relative;
@@ -8630,7 +8630,7 @@ h1, h2, h3, h4, h5,
       right: 0;
       bottom: 40px;
       width: 100%;
-      text-align: center; }
+      text-align: right; }
       @media (min-width: 992px) {
         .owl-carousel.home-slider .owl-dots {
           display: none; } }
@@ -9733,6 +9733,71 @@ textarea.form-control {
   -webkit-animation: loader-dash 1.5s ease-in-out infinite;
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
+
+  /* Clase para la sección de portada */
+.section-portada {
+  position: relative;
+  height: 100vh; /* Altura del viewport */
+
+  /* Estilo de la imagen de fondo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  /* Estilo del texto superpuesto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* Color del texto */
+  text-align: center;
+  padding: 20px;
+
+  /* Agregar superposición semi-transparente */
+  &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.2); /* Color semi-transparente */
+  }
+
+  /* Estilo del texto */
+  h1 {
+    font-size: 55px;
+    color: #000000;
+    line-height: 1.2;
+    font-weight: 800;
+  }
+
+  h1 span{
+    font-weight: 800;
+    color: #76a757;
+  }
+
+  p {
+      font-size: 18px;
+      margin-bottom: 30px;
+  }
+
+  /* Estilo del botón */
+  .btn {
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #76a757; /* Color del botón */
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+  }
+
+  /* Efecto de cambio de color al pasar el ratón por encima */
+  .btn:hover {
+    color: #003309;
+    text-decoration: none; }
+}
+
 
 @-webkit-keyframes loader-rotate {
   100% {
